@@ -23,8 +23,8 @@ jobs:
 
     - name: Convert Conf Files
       env:
-        CN_DNS: ${{ secrets.CN_DNS }}
-        THE_DNS: ${{ secrets.THE_DNS }}
+        CN_DNS: https://dns.alidns.com/dns-query quic://dns.alidns.com tls://dns.alidns.com
+        THE_DNS: tls://family.adguard-dns.com tls://family.cloudflare-dns.com
       run: python convert.py
 
     - name: Check for changes
